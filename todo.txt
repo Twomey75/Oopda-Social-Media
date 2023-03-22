@@ -1,0 +1,2 @@
+1. SocialMediaGUI needs to have more functionality added.
+2. Tokenizer needs to have its mostUsedTopic() method finished.
