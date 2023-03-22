@@ -121,9 +121,11 @@ public class SocialMediaGUI extends Application {
 		// Create a box for the social media feeds
 		VBox postBox = new VBox(5, this.lblStatus, buttonBox, this.postFeed);
 
-		
+		// Create a show media button
+		Button btnShowMedia = new Button("Show Media");
+
 		// Create a box for the media feed
-		VBox mediaBox = new VBox(5, this.lblMedia, this.mediaFeed);
+		VBox mediaBox = new VBox(5, this.lblMedia, btnShowMedia, this.mediaFeed);
 
 		// Add both VBoxes to the HBox (mainPane)
 		mainPane.getChildren().add(postBox);
