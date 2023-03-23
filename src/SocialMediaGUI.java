@@ -123,6 +123,7 @@ public class SocialMediaGUI extends Application {
 
 		// Create a show media button
 		Button btnShowMedia = new Button("Show Media");
+		btnShowMedia.setOnAction(event -> showMedia());
 
 		// Create a box for the media feed
 		VBox mediaBox = new VBox(5, this.lblMedia, btnShowMedia, this.mediaFeed);
@@ -166,6 +167,50 @@ public class SocialMediaGUI extends Application {
 		// Start the thread
 		backgroundThread.start();
 	}
+	
+	/**
+	 * This method shows the most talked about media
+	 */
+	private void showMedia() {
+		Runnable task = new Runnable() {
+			public void run() {
+				mostFrequentTopic();
+			}
+		};
+
+		// Run the task in a background thread
+		Thread backgroundThread = new Thread(task);
+		// Terminate the running thread if the application exits
+		backgroundThread.setDaemon(true);
+		// Start the thread
+		backgroundThread.start();
+	}
+
+	/**
+	 * This method can help identify the most frequent topic in a social media post
+	 */
+	private void mostFrequentTopic() {
+		for (int i = 0; i < NUMBER_OF_POSTS; i++) {
+			try {
+				// Now, interact with controls on the JavaFx Application Thread
+				Platform.runLater(new Runnable() {
+		            @Override 
+		            public void run() {
+		            	String content = (String) postEngine.executeScript("document.documentElement.outerHTML");
+						String tokenizer = Tokenizer.mostUsedTopic(content);
+						mediaEngine.loadContent(tokenizer);
+		            }
+		        });
+
+				// Take a 2-3 second break
+				Thread.sleep(2000 + (int) (Math.random() * 1000));
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
 
 	/**
 	 * This method will use the PostGenerator to create a list of sample posts.
@@ -185,7 +230,7 @@ public class SocialMediaGUI extends Application {
 		            @Override 
 		            public void run() {
 		            	lblStatus.setText(status);
-		            	String content = (String) 
+		            	String content = (String)
 		            			postEngine.executeScript("document.documentElement.outerHTML");
 						postEngine.loadContent(content + samplePost);
 		            }
