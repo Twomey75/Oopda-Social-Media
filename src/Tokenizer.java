@@ -45,7 +45,7 @@ public class Tokenizer {
 		}
 					
 		Integer maxValue = 0;
-		String maxKey = "nothing was found";
+		String maxKey = "";
 		for (Entry<String, Integer> entry : topics.entrySet()) {
 			// Compare to the previous max value.  
 			// If compareTo yields a positive number, the value is greater
