@@ -103,7 +103,6 @@ public class SocialMediaGUI extends Application {
 		mediaFeed.setPrefWidth(400);
 		
 		postEngine.setUserStyleSheetLocation("data:,body { font: 10px Arial; }");
-		mediaEngine.setUserStyleSheetLocation("data:,body { font: 10px Arial; }");
 		
 		// Set label heights to allow multi-line labels
 		lblStatus.setMinHeight(30);
@@ -202,7 +201,7 @@ public class SocialMediaGUI extends Application {
 						String tokenizer = Tokenizer.mostUsedTopic(content);
 						String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
 						
-						mediaEngine.loadContent(prevMedia + "\n" + tokenizer + " " + LocalTime.now() + "\n");
+						mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
 		            }
 		        });
 
