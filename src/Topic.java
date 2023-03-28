@@ -25,5 +25,5 @@ public enum Topic {
 	Pizza,
 	Romance,
 	Travel,
-	Grape
+	Grapes
 }
