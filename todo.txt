@@ -1,2 +1,13 @@
 1. SocialMediaGUI needs to have more functionality added.
 2. Tokenizer needs to have its mostUsedTopic() method finished.
+
+misc
+1. path for java 1.8 that works in settings is
+{
+    "name": "JavaSE-1.8",
+    "path": "C:\\Program Files\\Java\\jre1.8.0_361\\bin",
+    "default": true
+},
+
+2. settings .json to edit it if needed is
+C:\Users\Funct\AppData\Roaming\Code\User
