@@ -62,6 +62,11 @@ public class SocialMediaGUI extends Application {
 	 */
 	private static final int NUMBER_OF_POSTS = 12;
 
+	/**
+	 * the most used token.
+	 */
+	private String mostUsed = "";
+
 	private boolean showMedia = true;
 	private boolean generatingPosts = false;
 
@@ -200,6 +205,7 @@ public class SocialMediaGUI extends Application {
 	 * This method can help identify the most frequent topic in a social media post
 	 */
 	private void mostFrequentTopic() {
+	
 		if(generatingPosts) {
 			for (int i = 0; i < NUMBER_OF_POSTS; i++) {
 				try {
@@ -210,9 +216,11 @@ public class SocialMediaGUI extends Application {
 							String content = (String) postEngine.executeScript("document.documentElement.outerHTML");
 							String tokenizer = Tokenizer.mostUsedTopic(content);
 							String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
-							
-							mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
-							mediaEngine.loadContent(prevMedia + toothpaste.getHtmlString());
+							if(!mostUsed.equals(tokenizer)){
+								mostUsed = tokenizer;
+								mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
+								mediaEngine.loadContent(prevMedia + toothpaste.getHtmlString());
+							}
 						}
 					});
 
