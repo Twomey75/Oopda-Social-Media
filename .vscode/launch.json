@@ -9,6 +9,13 @@
             "name": "SocialMediaGUI",
             "request": "launch",
             "mainClass": "SocialMediaGUI",
+            "projectName": "Oopda-Social-Media_8bc5c228"
+        },
+        {
+            "type": "java",
+            "name": "SocialMediaGUI",
+            "request": "launch",
+            "mainClass": "SocialMediaGUI",
             "projectName": "Oopda-Social-Media_25d332d1"
         },
         {
