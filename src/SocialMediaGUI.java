@@ -215,7 +215,7 @@ public class SocialMediaGUI extends Application {
 
 							if(mostUsed == null || !mostUsed.equals(tokenizer)){
 								mostUsed = tokenizer;
-								mediaEngine.loadContent(prevMedia + );
+								mediaEngine.loadContent(prevMedia);
 							}
 						}
 					});
