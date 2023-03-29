@@ -1,8 +1,8 @@
-public class Image extends FileMedia {
-    
+public class Image extends Media {
+    String fileName;
 
-    public Image()
+    public Image(String title, String description, String fileName)
     {
-        super();
+        super(title, description);
     }
 }
