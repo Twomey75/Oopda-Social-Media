@@ -1,10 +1,9 @@
-import java.time.LocalDate;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Ad extends Media{
     private URL url;
-    private String adName;
 
     public Ad(String url1, String title, String description, Topic mediaTopic) throws MalformedURLException {
         super(title, description, mediaTopic);
