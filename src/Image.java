@@ -7,7 +7,7 @@ public class Image extends Media implements MediaFile{
     {
         super(title, description);
         this.file = new File(filePath);
-        htmlString = "<h2>" + title + "</h2>" + "<figure><img src='" + file.toURI() + "' />" + "<figcaption>" + description + "</figcaption></figure>";
+        htmlString = "<h2>" + title + "</h2>" + "<figure><img src='" + file.toURI() + "' />" + "<figcaption>" + description + "</figcaption></figure><hr />";
     }
 
     public File getFileName() 

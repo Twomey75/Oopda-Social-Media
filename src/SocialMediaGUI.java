@@ -62,7 +62,7 @@ public class SocialMediaGUI extends Application {
 	 */
 	private static final int NUMBER_OF_POSTS = 12;
 
-	Image bacon = new Image("bacon", "Crispy Bacon", "assets\\bacon.jpg");
+	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg");
 	
 	/**
 	 * the start method of the JavaFX GUI
@@ -203,8 +203,7 @@ public class SocialMediaGUI extends Application {
 						String tokenizer = Tokenizer.mostUsedTopic(content);
 						String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
 						
-						mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
-						mediaEngine.loadContent(bacon.getHtmlString());
+						mediaEngine.loadContent(prevMedia + bacon.getHtmlString() + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
 		            }
 		        });
 
