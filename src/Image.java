@@ -3,9 +3,9 @@ import java.io.File;
 public class Image extends Media implements MediaFile{
     File file;
 
-    public Image(String title, String description, String filePath)
+    public Image(String title, String description, String filePath, String mediaTopic)
     {
-        super(title, description);
+        super(title, description, mediaTopic);
         this.file = new File(filePath);
         htmlString = "<h2>" + title + "</h2>" + "<figure><img src='" + file.toURI() + "' />" + "<figcaption>" + description + "</figcaption></figure><hr />";
     }

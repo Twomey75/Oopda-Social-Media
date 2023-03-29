@@ -11,3 +11,5 @@ misc
 
 2. settings .json to edit it if needed is
 C:\Users\Funct\AppData\Roaming\Code\User
+
+array list of each media item and have the tokenizer string be compared to each media item's 
