@@ -9,7 +9,7 @@ public class Ad extends Media{
     public Ad(String url1, String title, String description, Topic mediaTopic) throws MalformedURLException {
         super(title, description, mediaTopic);
         this.setUrl(url1);
-        
+        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + "</p>";
     }
 
     public void setUrl(String url1) throws MalformedURLException {
