@@ -61,6 +61,11 @@ public class SocialMediaGUI extends Application {
 	 * the number of posts to generate in simulation
 	 */
 	private static final int NUMBER_OF_POSTS = 12;
+
+	private boolean showMedia = true;
+	private boolean generatingPosts = false;
+
+	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg");
 	
 	/**
 	 * the start method of the JavaFX GUI
@@ -153,7 +158,7 @@ public class SocialMediaGUI extends Application {
 	 * 
 	 */
 	private void startFeed() {
-		
+		generatingPosts = true;
 		// Create a task 
 		Runnable task = new Runnable() {
 			public void run() {
@@ -173,45 +178,53 @@ public class SocialMediaGUI extends Application {
 	 * This method shows the most talked about media
 	 */
 	private void showMedia() {
-		Runnable task = new Runnable() {
-			public void run() {
-				mostFrequentTopic();
-			}
-		};
+		if(showMedia) {
+			showMedia = false;
+			Runnable task = new Runnable() {
+				public void run() {
+					mostFrequentTopic();
+				}
+			};
 
-		// Run the task in a background thread
-		Thread backgroundThread = new Thread(task);
-		// Terminate the running thread if the application exits
-		backgroundThread.setDaemon(true);
-		// Start the thread
-		backgroundThread.start();
+			// Run the task in a background thread
+			Thread backgroundThread = new Thread(task);
+			// Terminate the running thread if the application exits
+			backgroundThread.setDaemon(true);
+			// Start the thread
+			backgroundThread.start();
+		}
 	}
 
 	/**
 	 * This method can help identify the most frequent topic in a social media post
 	 */
 	private void mostFrequentTopic() {
-		for (int i = 0; i < NUMBER_OF_POSTS; i++) {
-			try {
-				// Now, interact with controls on the JavaFx Application Thread
-				Platform.runLater(new Runnable() {
-		            @Override 
-		            public void run() {
-		            	String content = (String) postEngine.executeScript("document.documentElement.outerHTML");
-						String tokenizer = Tokenizer.mostUsedTopic(content);
-						String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
-						
-						mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
-		            }
-		        });
+		if(generatingPosts) {
+			for (int i = 0; i < NUMBER_OF_POSTS; i++) {
+				try {
+					// Now, interact with controls on the JavaFx Application Thread
+					Platform.runLater(new Runnable() {
+						@Override 
+						public void run() {
+							String content = (String) postEngine.executeScript("document.documentElement.outerHTML");
+							String tokenizer = Tokenizer.mostUsedTopic(content);
+							String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
+							
+							mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
+						}
+					});
 
-				// Take a 2-3 second break
-				Thread.sleep(2000 + (int) (Math.random() * 1000));
+					// Take a 2-3 second break
+					Thread.sleep(2000 + (int) (Math.random() * 1000));
+				}
+				catch (InterruptedException e)
+				{
+					e.printStackTrace();
+				}
 			}
-			catch (InterruptedException e)
-			{
-				e.printStackTrace();
-			}
+		}
+		else {
+			showMedia = true;
 		}
 	}
 
