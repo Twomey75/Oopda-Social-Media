@@ -223,6 +223,9 @@ public class SocialMediaGUI extends Application {
 				}
 			}
 		}
+		else {
+			showMedia = true;
+		}
 	}
 
 	/**
