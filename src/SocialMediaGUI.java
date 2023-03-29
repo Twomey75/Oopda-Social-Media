@@ -65,7 +65,7 @@ public class SocialMediaGUI extends Application {
 	/**
 	 * the most used token.
 	 */
-	private String mostUsed = "";
+	private Topic mostUsed = null;
 
 	private boolean showMedia = true;
 	private boolean generatingPosts = false;
@@ -207,24 +207,25 @@ public class SocialMediaGUI extends Application {
 	private void mostFrequentTopic() {
 	
 		if(generatingPosts) {
-			for (int i = 0; i < NUMBER_OF_POSTS; i++) {
+			for (int i = 0; i < 4; i++) {
 				try {
 					// Now, interact with controls on the JavaFx Application Thread
 					Platform.runLater(new Runnable() {
 						@Override 
 						public void run() {
 							String content = (String) postEngine.executeScript("document.documentElement.outerHTML");
-							String tokenizer = Tokenizer.mostUsedTopic(content);
-							String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
-							if(!mostUsed.equals(tokenizer)){
+							Topic tokenizer = Tokenizer.mostUsedTopic(content);
+							String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML");
+
+							if(mostUsed == null || !mostUsed.equals(tokenizer)){
 								mostUsed = tokenizer;
 								mediaEngine.loadContent(prevMedia + toothpaste.getHtmlString());
 							}
 						}
 					});
 
-					// Take a 2-3 second break
-					Thread.sleep(2000 + (int) (Math.random() * 1000));
+					// Take a 5-6 second break
+					Thread.sleep(5000 + (int) (Math.random() * 1000));
 				}
 				catch (InterruptedException e)
 				{
