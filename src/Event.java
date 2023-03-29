@@ -7,8 +7,8 @@ public class Event extends Media{
     private URL url;
     private String eventName;
 
-    public Event(int year, int month, int day, String url1, String title, String description) throws MalformedURLException {
-        super(title, description);
+    public Event(int year, int month, int day, String url1, String title, String description, Topic topic) throws MalformedURLException {
+        super(title, description, topic);
         this.setDate(year, month, day);
         this.setUrl(url1);
         

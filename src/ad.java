@@ -6,7 +6,7 @@ public class Ad extends Media{
     private URL url;
     private String adName;
 
-    public Ad(String url1, String title, String description, String mediaTopic) throws MalformedURLException {
+    public Ad(String url1, String title, String description, Topic mediaTopic) throws MalformedURLException {
         super(title, description, mediaTopic);
         this.setUrl(url1);
         
@@ -22,7 +22,7 @@ public class Ad extends Media{
     }
 
     public String toString(){
-        return "Come buy " + title + ", you know you want too. " + generateURL();
+        return "Come buy " + getTitle() + ", you know you want too. " + generateURL();
         }
 
         
