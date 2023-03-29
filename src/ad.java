@@ -22,7 +22,7 @@ public class Ad extends Media{
     }
 
     public String toString(){
-        return "Come buy " + title + ", you know you want too. " + generateURL();
+        return "Come buy " + getTitle() + ", you know you want too. " + generateURL();
         }
 
         

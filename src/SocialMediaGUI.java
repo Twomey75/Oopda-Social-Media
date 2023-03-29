@@ -125,7 +125,7 @@ public class SocialMediaGUI extends Application {
 		Button btnExit = new Button("Exit");	
 		
 		btnStart.setOnAction(event -> startFeed());
-		btnClear.setOnAction(event -> {postEngine.loadContent(""); mostUsed = "";}); 
+		btnClear.setOnAction(event -> {postEngine.loadContent("");}); 
 		btnExit.setOnAction(event -> Platform.exit());
 
 		HBox buttonBox = new HBox(5, btnStart, btnClear, btnExit);
