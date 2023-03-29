@@ -72,6 +72,7 @@ public class SocialMediaGUI extends Application {
 
 	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg", Topic.Bacon);
 	Video toothpaste = new Video("Toothpaste", "Minty Fresh", "assets\\toothpaste.mp4", Topic.Toothpaste);
+	Song sugar = new Song("Sugar", "Add some sweetness to life", "assets\\sugar.wav", Topic.Sugar, "Someone Lmao")
 	
 	/**
 	 * the start method of the JavaFX GUI
