@@ -3,7 +3,7 @@ import java.io.File;
 public class Video extends Media implements MediaFile{
     File file;
 
-    public Video(String title, String description, String filePath, String mediaTopic)
+    public Video(String title, String description, String filePath, Topic mediaTopic)
     {
         super(title, description, mediaTopic);
         this.file = new File(filePath);
