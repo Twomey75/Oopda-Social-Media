@@ -68,6 +68,9 @@ public class SocialMediaGUI extends Application {
 
 	private boolean showMedia = true;
 	private boolean generatingPosts = false;
+
+	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg", Topic.Bacon);
+	Video toothpaste = new Video("Toothpaste", "Minty Fresh", "assets\\toothpaste.mp4", Topic.Toothpaste);
 	
 	/**
 	 * the start method of the JavaFX GUI
@@ -215,7 +218,7 @@ public class SocialMediaGUI extends Application {
 
 							if(mostUsed == null || !mostUsed.equals(tokenizer)){
 								mostUsed = tokenizer;
-								mediaEngine.loadContent(prevMedia);
+								mediaEngine.loadContent(prevMedia + sugar.getHtmlString());
 							}
 						}
 					});
