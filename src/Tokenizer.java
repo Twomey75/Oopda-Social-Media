@@ -29,7 +29,7 @@ public class Tokenizer {
 	 * 						(Note: in case of a tie, any value of the enum can be returned.)
 	 * 
 	 */
-	public static String mostUsedTopic(String inputString) {
+	public static Topic mostUsedTopic(String inputString) {
 		// First lowercase the string
 		inputString = inputString.toLowerCase();
 		
@@ -37,16 +37,16 @@ public class Tokenizer {
 		inputString = removeHTMLtags(inputString);
 		
 		// Now create the HashMap to store the analyzed results
-		HashMap<String, Integer> topics = new HashMap<String, Integer>();
+		HashMap<Topic, Integer> topics = new HashMap<Topic, Integer>();
 
 		// Loop through the values of the Topic enum and populate the HashMap
 		for (Topic topic : Topic.values()) {
-			topics.put(topic.toString(), countTargetWords(inputString, topic.name().toLowerCase()));
+			topics.put(topic, countTargetWords(inputString, topic.name().toLowerCase()));
 		}
 					
 		Integer maxValue = 0;
-		String maxKey = "";
-		for (Entry<String, Integer> entry : topics.entrySet()) {
+		Topic maxKey = null;
+		for (Entry<Topic, Integer> entry : topics.entrySet()) {
 			// Compare to the previous max value.  
 			// If compareTo yields a positive number, the value is greater
 			if (entry.getValue().compareTo(maxValue) > 0) {

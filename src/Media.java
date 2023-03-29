@@ -2,9 +2,9 @@ public class Media {
     private String title;
     private String description;
     protected String htmlString;
-    private String mediaTopic;
+    private Topic mediaTopic;
 
-    public Media(String title, String description, String mediaTopic)
+    public Media(String title, String description, Topic mediaTopic)
     {
         this.title = title;
         this.description = description;
@@ -26,7 +26,7 @@ public class Media {
         return htmlString;
     }
 
-    public String getMediaTopic() 
+    public Topic getMediaTopic() 
     {
         return mediaTopic;
     }
