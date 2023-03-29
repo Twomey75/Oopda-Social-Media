@@ -65,8 +65,8 @@ public class SocialMediaGUI extends Application {
 	private boolean showMedia = true;
 	private boolean generatingPosts = false;
 
-	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg");
-	Video toothpaste = new Video("Toothpaste", "Minty Fresh", "assets\\toothpaste.mp4");
+	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg", "Bacon");
+	Video toothpaste = new Video("Toothpaste", "Minty Fresh", "assets\\toothpaste.mp4", "Toothpaste");
 	
 	/**
 	 * the start method of the JavaFX GUI
