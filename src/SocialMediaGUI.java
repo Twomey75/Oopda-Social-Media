@@ -212,7 +212,7 @@ public class SocialMediaGUI extends Application {
 							String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
 							
 							mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
-							mediaEngine.loadContent(toothpaste.getHtmlString());
+							mediaEngine.loadContent(prevMedia + toothpaste.getHtmlString());
 						}
 					});
 
