@@ -66,6 +66,7 @@ public class SocialMediaGUI extends Application {
 	private boolean generatingPosts = false;
 
 	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg");
+	Video toothpaste = new Video("Toothpaste", "Minty Fresh", "assets\\toothpaste.mp4");
 	
 	/**
 	 * the start method of the JavaFX GUI
@@ -211,6 +212,7 @@ public class SocialMediaGUI extends Application {
 							String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
 							
 							mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
+							mediaEngine.loadContent(toothpaste.getHtmlString());
 						}
 					});
 
