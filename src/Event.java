@@ -2,18 +2,16 @@ import java.time.LocalDate;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Event extends Media implements Sponsorable{
+public class Event extends Media{
     private LocalDate date;
     private URL url;
     private String eventName;
-    private String title;
-    private String description;
 
     public Event(int year, int month, int day, String url1, String title, String description) throws MalformedURLException {
+        super(title, description);
         this.setDate(year, month, day);
         this.setUrl(url1);
-        this.title = title;
-        this.description = description;
+
         
     }
 
