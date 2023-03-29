@@ -72,7 +72,11 @@ public class SocialMediaGUI extends Application {
 
 	Image bacon = new Image("bacon", "A slice", "assets\\bacon.jpg", Topic.Bacon);
 	Video toothpaste = new Video("Toothpaste", "Minty Fresh", "assets\\toothpaste.mp4", Topic.Toothpaste);
+<<<<<<< HEAD
 	Song sugar = new Song("Sugar", "Add some sweetness to life", "assets\\sugar.wav", Topic.Sugar, "Someone Lmao");
+=======
+	Song sugar = new Song("Sugar", "Add some sweetness to life", "assets\\sugar.wav", Topic.Sugar, "Def Leppard");
+>>>>>>> c1f93a0975088ea46d5e2ccc9e9e132c929cde93
 	
 	/**
 	 * the start method of the JavaFX GUI
@@ -220,7 +224,7 @@ public class SocialMediaGUI extends Application {
 
 							if(mostUsed == null || !mostUsed.equals(tokenizer)){
 								mostUsed = tokenizer;
-								mediaEngine.loadContent(prevMedia + toothpaste.getHtmlString());
+								mediaEngine.loadContent(prevMedia + sugar.getHtmlString());
 							}
 						}
 					});
