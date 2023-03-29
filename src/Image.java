@@ -1,5 +1,5 @@
-public class Image extends Media {
-    private String imageFile;
+public class Image extends FileMedia {
+    
 
     public Image()
     {
