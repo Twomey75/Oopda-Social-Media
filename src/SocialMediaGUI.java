@@ -61,6 +61,8 @@ public class SocialMediaGUI extends Application {
 	 * the number of posts to generate in simulation
 	 */
 	private static final int NUMBER_OF_POSTS = 12;
+
+	Image bacon = new Image("bacon", "Crispy Bacon", "assets\\bacon.jpg");
 	
 	/**
 	 * the start method of the JavaFX GUI
@@ -202,6 +204,7 @@ public class SocialMediaGUI extends Application {
 						String prevMedia = (String) mediaEngine.executeScript("document.documentElement.outerHTML"); 
 						
 						mediaEngine.loadContent(prevMedia + tokenizer + "<span style='font-size: x-small;'>" + " " + LocalTime.now() + "</span><hr />");
+						mediaEngine.loadContent(bacon.getHtmlString());
 		            }
 		        });
 
