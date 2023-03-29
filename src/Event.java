@@ -11,7 +11,6 @@ public class Event extends Media{
         super(title, description);
         this.setDate(year, month, day);
         this.setUrl(url1);
-
         
     }
 
@@ -19,7 +18,7 @@ public class Event extends Media{
         this.date = LocalDate.of(year, month, day);
     }
 
-    public void setUrl(String url1) throws MalformedURLException {
+    public void setUrl(String url1) throws MalformedURLExceptin {
         url = new URL(url1);
     }
 
