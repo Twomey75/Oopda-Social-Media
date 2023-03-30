@@ -2,6 +2,9 @@ import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 
+/**
+ * @author Andrew Petrany
+ */
 public class MediaCollection {
     HashMap<Topic, Media> mediaCollection = new HashMap<Topic, Media>();
 
