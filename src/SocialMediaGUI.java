@@ -20,7 +20,9 @@ import javafx.stage.Stage;
  * to create ads.
  * 
  * @author Jack Myers
- *
+ * @author Sean Twomey
+ * @author Andrew Patrany
+ * 
  */
 public class SocialMediaGUI extends Application {
 
