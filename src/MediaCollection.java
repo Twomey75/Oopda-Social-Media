@@ -17,7 +17,7 @@ public class MediaCollection {
         mediaCollection.put(Topic.Pancakes, new Video("Pancakes", "Nice pancakes yum", "assests//Pancakes.mp4", Topic.Pancakes));
         mediaCollection.put(Topic.Toothpaste, new Video("ToothPaste", "1% of doctors dont reccommend toothpaste!", "assests//Toothpaste.mp4", Topic.Toothpaste));
         mediaCollection.put(Topic.Sugar, new Song("Sugar", "sugar song","assets//Sugar.wav", Topic.Sugar, "artist"));
-        mediaCollection.put(Topic.Barbies, new Image("Barbies", "Buy barbies now", "assets//barbies.ppeg", Topic.Barbies));
+        mediaCollection.put(Topic.Barbies, new Image("Barbies", "Buy barbies now", "assets//barbies.png", Topic.Barbies));
         mediaCollection.put(Topic.Investments, new Event(2022, 12, 4, "https://www.google.com", "Real estate investments", "Learn how to invest in real estate", Topic.Investments));
         mediaCollection.put(Topic.Superman, new Event(2023, 4, 2, "https://www.google.com", "MEET SUPERMAN", "Meet the hero who saved metropolis", Topic.Superman));
         mediaCollection.put(Topic.Hairstyles, new Image("Hair Styles", "If you're insecure about your hair, change it!", "assets//Hairstyles.jpg", Topic.Hairstyles));
