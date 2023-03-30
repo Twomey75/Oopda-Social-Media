@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class Event extends Media{
@@ -7,11 +8,11 @@ public class Event extends Media{
     private URL url;
     private String eventName;
 
-    public Event(int year, int month, int day, String url1, String title, String description, Topic topic) throws MalformedURLException {
+    public Event(int year, int month, int day, String url1, String title, String description, Topic topic) throws URISyntaxException, MalformedURLException {
         super(title, description, topic);
         this.setDate(year, month, day);
         this.setUrl(url1);
-        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + "</p>";
+        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + "</p>" + "<a href='" + url.toURI() + "'>" + url + "</a>";
     }
 
     public void setDate(int year, int month, int day){
