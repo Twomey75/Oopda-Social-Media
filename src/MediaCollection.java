@@ -11,7 +11,7 @@ public class MediaCollection {
         mediaCollection.put(Topic.Hamsters, new Song ("Hamsters", "hamster song","assets//HamsterDance.wav", Topic.Hamsters, "artist"));
         mediaCollection.put(Topic.Volkswagons, new Ad("https://www.google.com", "Volkswagons", "Pls buy a volkswagon :)", Topic.Volkswagons));
         mediaCollection.put(Topic.Yachts, new Image("Yachts", "Big yacht", "assets//yacht.jpg", Topic.Yachts));
-        mediaCollection.put(Topic.Squirrels, new Image("Squirtle >>> charizard (I know nothing about yu- gi- oh)", "Do you have an iq higher then a squirrel?", "assets/squirrels.png", Topic.Squirrels));
+        mediaCollection.put(Topic.Squirrels, new Image("Squirtle >>> charizard (I know nothing about yu- gi- oh)", "Do you have an iq higher then a squirrel?", "assets//squirrel.png", Topic.Squirrels));
         mediaCollection.put(Topic.Popcorn, new  Song("Popcorn", "Popcorn song","assets//Popcorn.wav", Topic.Popcorn, "artist"));
         mediaCollection.put(Topic.Music, new Song("Song", "Music song","assets//Music.wav", Topic.Music, "artist"));
         mediaCollection.put(Topic.Pancakes, new Video("Pancakes", "Nice pancakes yum", "assests//Pancakes.mp4", Topic.Pancakes));
