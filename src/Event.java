@@ -26,7 +26,7 @@ public class Event extends Media{
         super(title, description, topic);
         this.setDate(year, month, day);
         this.setUrl(url1);
-        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + " " + date + "</p>" + "<a href='" + url.toURI() + "'>" + url + "</a>";
+        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + " " + date + "</p>" + "<a href='" + url.toURI() + "'>" + url + "</a><hr />";
     }
 
     /**

@@ -19,11 +19,11 @@ public class Ad extends Media{
     public Ad(String url1, String title, String description, Topic mediaTopic) throws MalformedURLException, URISyntaxException {
         super(title, description, mediaTopic);
         this.setUrl(url1);
-        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + "</p>" + "<a href='" + url.toURI() + "'>" + url + "</a>";
+        htmlString = "<h2>" + title + "</h2>" + "<p>" + description + "</p>" + "<a href='" + url.toURI() + "'>" + url + "</a><hr />";
     }
 
     /**
-     * 
+     * Allows the user to set the url of this ad
      * @param url1 - the url of the object
      * @throws MalformedURLException - exception for URL
      */

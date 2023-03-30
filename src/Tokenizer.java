@@ -6,6 +6,7 @@ import java.util.Map.Entry;
  * extracting tokens from a String.
  * 
  * @author Jack Myers
+ * @author Sean Twomey
  *
  */
 public class Tokenizer {
@@ -43,7 +44,8 @@ public class Tokenizer {
 		for (Topic topic : Topic.values()) {
 			topics.put(topic, countTargetWords(inputString, topic.name().toLowerCase()));
 		}
-					
+
+		// Set max value to 0 in preparation			
 		Integer maxValue = 0;
 		Topic maxKey = null;
 		for (Entry<Topic, Integer> entry : topics.entrySet()) {
@@ -55,6 +57,7 @@ public class Tokenizer {
 			}
 		}
 		
+		// Return the topic with the most hits
 		return maxKey;
 
 	}

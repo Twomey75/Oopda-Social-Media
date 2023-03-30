@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Driver",
+            "request": "launch",
+            "mainClass": "Driver",
+            "projectName": "Oopda-Social-Media_880ecbbb"
+        },
+        {
+            "type": "java",
             "name": "SocialMediaGUI",
             "request": "launch",
             "mainClass": "SocialMediaGUI",

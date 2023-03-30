@@ -3,9 +3,14 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 
 /**
+ * This class takes care of all the Topics and their corresponding media items
+ * 
  * @author Andrew Petrany
+ * @author Sean Twomey
+ * 
  */
 public class MediaCollection {
+    // Initialize the hash map containing all of the media items
     HashMap<Topic, Media> mediaCollection = new HashMap<Topic, Media>();
 
     public MediaCollection() throws MalformedURLException, URISyntaxException {
@@ -30,11 +35,20 @@ public class MediaCollection {
         mediaCollection.put(Topic.Grapes, new Ad("https://www.google.com","Grapes", "They did surgery on a grape", Topic.Grapes));
     }
 
+    /**
+     * Returns the collection of media items
+     * @return the collection of media items
+     */
     public HashMap<Topic, Media> getMediaCollection()
     {
         return mediaCollection;
     }
 
+    /**
+     * Return an indvidual media item from the collection of media items by providing it's corresponding topic
+     * @param topic the topic of the media item that is being accessed
+     * @return the media item that corresponds to the provided topic
+     */
     public Media getMediaItem(Topic topic)
     {
         return mediaCollection.get(topic);

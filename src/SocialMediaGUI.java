@@ -190,6 +190,7 @@ public class SocialMediaGUI extends Application {
 			showMedia = false;
 			Runnable task = new Runnable() {
 				public void run() {
+					// General try catch for the 2 potential exceptions mostFrequentTopic() may run into
 					try {
 						mostFrequentTopic();
 					}
@@ -214,6 +215,7 @@ public class SocialMediaGUI extends Application {
 	private void mostFrequentTopic() throws MalformedURLException, URISyntaxException {
 		MediaCollection mediaCollection = new MediaCollection();
 
+		// Make sure posts have already started to be generated to not start the media feed before there is anything for the tokenizer to recognize
 		if(generatingPosts) {
 			for (int i = 0; i < 4; i++) {
 				try {
@@ -279,11 +281,6 @@ public class SocialMediaGUI extends Application {
 			}
 		}
 	}
-
-	public static void addItems() throws MalformedURLException, URISyntaxException{
-		;
-	}
-
 		
 	
 	/*******************************************************************/
