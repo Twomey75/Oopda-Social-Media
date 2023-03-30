@@ -1,7 +1,7 @@
 import java.io.File;
 
 /**
- * Blue print for an image media item
+ * This class represents the image media item and has a file that it is able to access
  * 
  * @author Sean Twomey
  *

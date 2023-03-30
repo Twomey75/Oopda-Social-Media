@@ -1,5 +1,12 @@
 import java.io.File;
 
+/**
+ * This class represents the video media item and has a file that it is able to access
+ * 
+ * @author Sean Twomey
+ *
+ */
+
 public class Video extends Media implements MediaFile{
     // The video file
     File file;
