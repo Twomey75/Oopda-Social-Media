@@ -65,11 +65,6 @@ public class SocialMediaGUI extends Application {
 	private static final int NUMBER_OF_POSTS = 12;
 
 	/**
-	 * the collection of media files
-	 */
-	private MediaCollection mediaCollection = new MediaCollection();
-
-	/**
 	 * the most used token.
 	 */
 	private Topic mostUsed = null;
@@ -193,7 +188,12 @@ public class SocialMediaGUI extends Application {
 			showMedia = false;
 			Runnable task = new Runnable() {
 				public void run() {
-					mostFrequentTopic();
+					try {
+						mostFrequentTopic();
+					}
+					catch(Exception E) {
+						showMedia = true;
+					}
 				}
 			};
 
@@ -209,7 +209,8 @@ public class SocialMediaGUI extends Application {
 	/**
 	 * This method can help identify the most frequent topic in a social media post
 	 */
-	private void mostFrequentTopic() {
+	private void mostFrequentTopic() throws MalformedURLException, URISyntaxException {
+		MediaCollection mediaCollection = new MediaCollection();
 
 		if(generatingPosts) {
 			for (int i = 0; i < 4; i++) {
@@ -224,7 +225,7 @@ public class SocialMediaGUI extends Application {
 
 							if(mostUsed == null || !mostUsed.equals(tokenizer)){
 								mostUsed = tokenizer;
-								mediaEngine.loadContent(prevMedia + mediaCollection.getMediaCollection().get(tokenizer).getHtmlString());
+								mediaEngine.loadContent(prevMedia + mediaCollection.getMediaItem(tokenizer).getHtmlString());
 							}
 						}
 					});
