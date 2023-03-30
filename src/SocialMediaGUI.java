@@ -68,11 +68,6 @@ public class SocialMediaGUI extends Application {
 	 * the collection of media files
 	 */
 	private MediaCollection mediaCollection = new MediaCollection();
-	
-	
-	
-	
-	
 
 	/**
 	 * the most used token.
