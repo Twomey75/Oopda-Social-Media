@@ -10,7 +10,7 @@ import java.util.HashMap;
  * 
  */
 public class MediaCollection {
-    // Initialize the hash map containing all of the media items
+    // Initialize the hash map that will contain all of the media items
     HashMap<Topic, Media> mediaCollection = new HashMap<Topic, Media>();
 
     public MediaCollection() throws MalformedURLException, URISyntaxException {

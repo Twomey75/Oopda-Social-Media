@@ -211,6 +211,8 @@ public class SocialMediaGUI extends Application {
 
 	/**
 	 * This method can help identify the most frequent topic in a social media post
+	 * @throws MalformedURLException - exeception for if a inputed url is no good
+	 * @throws URISyntaxException - exception for if a String is unable to be passes as a URI ref
 	 */
 	private void mostFrequentTopic() throws MalformedURLException, URISyntaxException {
 		MediaCollection mediaCollection = new MediaCollection();

@@ -30,7 +30,7 @@ public class Event extends Media{
     }
 
     /**
-     * 
+     * Sets the date of the event
      * @param year - year of the event
      * @param month - month of the event
      * @param day - day of the eventy
@@ -40,7 +40,7 @@ public class Event extends Media{
     }
 
     /**
-     * 
+     * Sets the url of the event
      * @param url1 - the url for the event
      * @throws MalformedURLException
      */

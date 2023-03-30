@@ -7,7 +7,7 @@ import java.io.File;
  *
  */
 
-public interface MediaFile {
-    
+public interface MediaFile 
+{
     public File getFile();
 }
