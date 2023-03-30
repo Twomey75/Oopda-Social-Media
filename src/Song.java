@@ -23,7 +23,7 @@ public class Song extends Media implements MediaFile{
      * returns the file of the song media item
      * @return the file of the song media item
      */
-    public File getFileName() 
+    public File getFile() 
     {
         return file;
     }

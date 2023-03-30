@@ -14,8 +14,8 @@ public class MediaCollection {
         mediaCollection.put(Topic.Squirrels, new Image("Squirtle >>> charizard (I know nothing about yu- gi- oh)", "Do you have an iq higher then a squirrel?", "assets//squirrel.png", Topic.Squirrels));
         mediaCollection.put(Topic.Popcorn, new  Song("Popcorn", "Popcorn song","assets//Popcorn.wav", Topic.Popcorn, "artist"));
         mediaCollection.put(Topic.Music, new Song("Song", "Music song","assets//Music.wav", Topic.Music, "artist"));
-        mediaCollection.put(Topic.Pancakes, new Video("Pancakes", "Nice pancakes yum", "assests//Pancakes.mp4", Topic.Pancakes));
-        mediaCollection.put(Topic.Toothpaste, new Video("ToothPaste", "1% of doctors dont reccommend toothpaste!", "assests//Toothpaste.mp4", Topic.Toothpaste));
+        mediaCollection.put(Topic.Pancakes, new Video("Pancakes", "Nice pancakes yum", "assets//Pancakes.mp4", Topic.Pancakes));
+        mediaCollection.put(Topic.Toothpaste, new Video("ToothPaste", "1% of doctors dont reccommend toothpaste!", "assets//Toothpaste.mp4", Topic.Toothpaste));
         mediaCollection.put(Topic.Sugar, new Song("Sugar", "sugar song","assets//Sugar.wav", Topic.Sugar, "artist"));
         mediaCollection.put(Topic.Barbies, new Image("Barbies", "Buy barbies now", "assets//barbies.png", Topic.Barbies));
         mediaCollection.put(Topic.Investments, new Event(2022, 12, 4, "https://www.google.com", "Real estate investments", "Learn how to invest in real estate", Topic.Investments));

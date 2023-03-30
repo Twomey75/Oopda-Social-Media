@@ -22,7 +22,7 @@ public class Image extends Media implements MediaFile{
      * returns the file of the image media item
      * @return the file of the image media item
      */
-    public File getFileName() 
+    public File getFile() 
     {
         return file;
     }

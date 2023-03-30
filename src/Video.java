@@ -23,7 +23,7 @@ public class Video extends Media implements MediaFile{
      * returns the file of the video media item
      * @return the file of the video media item
      */
-    public File getFileName() 
+    public File getFile() 
     {
         return file;
     }
