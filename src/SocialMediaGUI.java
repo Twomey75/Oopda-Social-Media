@@ -1,4 +1,6 @@
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -11,6 +13,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
 
 /**
  * A GUI that will simulate Social Media posts to test an application
@@ -65,6 +68,11 @@ public class SocialMediaGUI extends Application {
 	 * the collection of media files
 	 */
 	private MediaCollection mediaCollection = new MediaCollection();
+	
+	
+	
+	
+	
 
 	/**
 	 * the most used token.
@@ -102,6 +110,7 @@ public class SocialMediaGUI extends Application {
 				"-fx-background-color: aliceblue");  		
 	}
 	
+
 	/**
 	 * Set up any controls not needed by the event handlers
 	 * 
@@ -206,7 +215,7 @@ public class SocialMediaGUI extends Application {
 	 * This method can help identify the most frequent topic in a social media post
 	 */
 	private void mostFrequentTopic() {
-	
+
 		if(generatingPosts) {
 			for (int i = 0; i < 4; i++) {
 				try {
@@ -272,6 +281,12 @@ public class SocialMediaGUI extends Application {
 			}
 		}
 	}
+
+	public static void addItems() throws MalformedURLException, URISyntaxException{
+		;
+	}
+
+		
 	
 	/*******************************************************************/
 	
