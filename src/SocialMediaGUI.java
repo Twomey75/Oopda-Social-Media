@@ -1,4 +1,5 @@
 
+import java.lang.invoke.VolatileCallSite;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -69,7 +70,7 @@ public class SocialMediaGUI extends Application {
 	/**
 	 * the most used token.
 	 */
-	private Topic mostUsed = null;
+	private volatile Topic mostUsed = null;
 
 	private boolean showMedia = true;
 	private boolean generatingPosts = false;
