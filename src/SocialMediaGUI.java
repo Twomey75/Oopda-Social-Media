@@ -196,6 +196,7 @@ public class SocialMediaGUI extends Application {
 					}
 					catch(Exception E) {
 						showMedia = true;
+						E.printStackTrace();
 					}
 				}
 			};
