@@ -13,3 +13,35 @@ misc
 C:\Users\Funct\AppData\Roaming\Code\User
 
 array list of each media item and have the tokenizer string be compared to each media item's 
+
+
+my desktop settings.json
+
+{
+    "python.defaultInterpreterPath": "C:\\Users\\Funct\\AppData\\Local\\Microsoft\\WindowsApps\\python3.9.exe",
+    "workbench.editorAssociations": {
+        "*.pdb": "default"
+    },
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "C_Cpp.addNodeAddonIncludePaths": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "java.configuration.runtimes": [
+        
+
+
+        {
+            "name": "JavaSE-11",
+            "path": "C:\\Program Files\\Microsoft\\jdk-11.0.12.7-hotspot"
+        },
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Program Files\\Java\\jre1.8.0_361",
+            "default": true
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "C:\\Program Files\\Java\\jdk-17.0.5"
+        }
+    ]
+}
