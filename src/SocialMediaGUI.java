@@ -233,6 +233,8 @@ public class SocialMediaGUI extends Application {
 							if(mostUsed == null || !mostUsed.equals(tokenizer)){
 								mostUsed = tokenizer;
 								mediaEngine.loadContent(prevMedia + mediaCollection.getMediaItem(tokenizer).getHtmlString());
+								// Seperate line for testing individual topics
+								// mediaEngine.loadContent(mediaCollection.getMediaItem(Topic.Yachts).getHtmlString());
 							}
 						}
 					});
