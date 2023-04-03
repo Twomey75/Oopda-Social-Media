@@ -14,7 +14,7 @@ public class MediaCollection {
     HashMap<Topic, Media> mediaCollection = new HashMap<Topic, Media>();
 
     public MediaCollection() throws MalformedURLException, URISyntaxException {
-        mediaCollection.put(Topic.Doritos, new Ad("https://www.google.com","DORITOS", "the second best triangle", Topic.Doritos) ); 
+        mediaCollection.put(Topic.Doritos, new Ad("https://www.doritos.com","DORITOS", "the second best triangle", Topic.Doritos) ); 
         mediaCollection.put(Topic.Bacon, new Image("Bacon", "Yummy Bacon", "assets//bacon.jpg", Topic.Bacon ));
         mediaCollection.put(Topic.Hamsters, new Song ("Hamsters", "hamster song","assets//HamsterDance.wav", Topic.Hamsters, "artist"));
         mediaCollection.put(Topic.Volkswagons, new Ad("https://www.google.com", "Volkswagons", "Pls buy a volkswagon :)", Topic.Volkswagons));
